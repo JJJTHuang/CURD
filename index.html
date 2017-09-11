@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据的增删改查2</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="data.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="showData.js"></script>
+    <script src="options.js"></script>
+    <script src="Add3data.js"></script>
+    <script src="jquery.tablesorter.min.js"></script>
+    <script src="jquery.tablesorter.widgets.min.js"></script>
+    <script>
+        $(function () {
+            $('table').tablesorter({
+                widgets: ['zebra', 'columns'],
+                usNumberFormat: false,
+                sortReset: true
+//                sortRestart: true
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">学生成绩</div>
+        <div class="panel-body">
+            <p class="p2"></p>
+            <table class="table table-striped">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="text" class="form-control" id="searchbox" placeholder="输入要查询的学生学号">
+                        <p class="p1">&nbsp;&nbsp;&nbsp;</p>
+                    </div>
+
+                </div>
+                <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>平时成绩</th>
+                    <th>期考成绩</th>
+                    <th>实验成绩</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="row Fenye" style="text-align: center">
+                <button class="btn btn-primary" id="FenyeBtn">分页</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">添加学生信息</div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group" id="form-group">
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">学号</label>
+                        <div class="col-sm-11">
+                            <input type="text" id="XH" class="form-control">
+                            <p class="p2" style="color: red"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">平时成绩</label>
+                        <div class="col-sm-11">
+                            <input type="text" id="Ps" class="form-control cj">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">期考成绩</label>
+                        <div class="col-sm-11">
+                            <input type="text" id="QK" class="form-control cj">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">实验成绩</label>
+                        <div class="col-sm-11">
+                            <input type="text" id="SY" class="form-control cj">
+                        </div>
+                    </div>
+                    <p class="p3" style="color: red"></p>
+                    <p class="p4"></p>
+                    <div class="row">
+                        <div class="col-xs-4"></div>
+                        <div><input class="col-xs-4 btn btn-primary" id="submit" readonly value="submit"></div>
+                        <div class="col-xs-4"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
