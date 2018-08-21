@@ -4,6 +4,6 @@
 
 <p style="color:red">(本地运行可能会出现chrome下直接打开由于跨域无法获取到数据,用火狐才能显示数据,若您需要,可以把json文件直接转成数组,即可避免跨域带来的问题。)</p>
 
-演示地址-><a href="http://jthuang.cn/dataoptions2/index.html">DEMO</a>
+[演示地址](https://codepen.io/Timm515/pen/KxKeEZ)
 
 <h3>提示:由于数据并非从后端获取，所以每次刷新页面，前面的操作都会全部清空，数据还原为原先的样子</h3>
